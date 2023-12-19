@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+<<<<<<< HEAD
     <Button
         android:id="@+id/btn_dialog"
         android:layout_width="wrap_content"
@@ -20,5 +21,8 @@
         android:layout_below="@+id/btn_dialog"
         android:layout_centerHorizontal="true"
         android:text="Open Custom Dialog" />
+=======
+
+>>>>>>> 1f3272adad8e70f30ce62d58d2911e7fb1180f1e
 
 </RelativeLayout>
