@@ -6,20 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn_dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Open Alert Dialog" />
 
     <Button
-        android:id="@+id/btn_custom_dialog"
+        android:id="@+id/btn_open_custom_alert_diaglog"
+        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_dialog"
-        android:layout_centerHorizontal="true"
-        android:text="Open Custom Dialog" />
+        android:layout_height="wrap_content"/>
 
 
 </RelativeLayout>

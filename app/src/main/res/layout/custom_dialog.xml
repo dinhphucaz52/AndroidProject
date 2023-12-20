@@ -2,74 +2,45 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="16dp"
-    android:background="@drawable/bg_white_corner_16"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    android:layout_height="wrap_content">
 
     <TextView
-        android:text="Send your feedback!"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:padding="12dp"
-        android:background="@drawable/bg_yellow_corner_top_left_top_right_16"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    
-    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:orientation="vertical">
-        
-        <TextView
-            android:text="Please send us your feedback"
-            android:layout_width="match_parent"
+        android:gravity="center"
+        android:text="CUSTOM DIALOG"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:gravity="center"
+        android:hint="TEST"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_yes"
             android:textSize="14sp"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:layout_height="wrap_content" />
-        
-        <EditText
-            android:id="@+id/edt_feedback"
-            android:hint="Feedback"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/bg_grey_corner_10_border"
-            android:padding="12dp"
-            android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <LinearLayout
-            android:layout_marginTop="16dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/btn_no"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="14sp"
-                android:background="@drawable/bg_grey_corner_10"
-                android:layout_marginEnd="10dp"
-                android:alpha="0.4"
-                android:text="No"/>
-
-            <Button
-                android:id="@+id/btn_yes"
-                android:background="@drawable/bg_yellow_corner_10"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:layout_weight="1"
-                android:text="Yes"/>
-
-        </LinearLayout>
-
+            android:text="YES"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_no"
+            android:textSize="10sp"
+            android:text="NO"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
-
-
 
 </LinearLayout>
