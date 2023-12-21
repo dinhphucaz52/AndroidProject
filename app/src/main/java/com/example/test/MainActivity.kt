@@ -1,46 +1,54 @@
 package com.example.test
 
-import android.app.Dialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.util.Log
-import android.view.Gravity
-import android.view.WindowManager.LayoutParams
 import android.widget.Button
-import android.widget.Toast
-import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var btnNavigateMain2: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Log.d("pphat", "onCreate")
 
-        val btn_open_custom_alert_diaglog:Button = findViewById(R.id.btn_open_custom_alert_diaglog);
+        btnNavigateMain2 = findViewById(R.id.button_navigate_main2)
 
-        btn_open_custom_alert_diaglog.setOnClickListener {
-            Dialog(this@MainActivity).apply {
-                setCancelable(false)
-                setContentView(R.layout.custom_dialog)
-                window?.setLayout(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
-                window?.setGravity(Gravity.CENTER)
-
-                val btn_yes:Button = findViewById(R.id.btn_yes)
-                val btn_no:Button = findViewById(R.id.btn_no)
-
-                btn_yes.setOnClickListener {
-                    dismiss()
-                }
-
-                btn_no.setOnClickListener {
-                    dismiss()
-                }
-
-            }.show()
+        btnNavigateMain2.setOnClickListener {
+            val intent = Intent(this@MainActivity, MainActivity2::class.java)
+            startActivity(intent)
         }
+    }
 
+    override fun onStart() {
+        super.onStart()
+        Log.d("pphat", "onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("pphat", "onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("pphat", "onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("pphat", "onStop")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("pphat", "onRestart")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("pphat", "onDestroy")
     }
 }
-
-
