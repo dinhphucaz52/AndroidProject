@@ -12,11 +12,9 @@ class MainActivity : AppCompatActivity() {
 
         val btn_open_custom_dialog: Button = findViewById(R.id.btn_open_custom_dialog)
         btn_open_custom_dialog.setOnClickListener {
-            DialogUtil.openCustomDialog(this@MainActivity, object : interfaceOnlistenLogin {
-                override fun onListenLogin(accountString: String, passwordString: String) {
-                    Toast.makeText(this@MainActivity, accountString + passwordString, Toast.LENGTH_SHORT).show()
-                }
-            })
+            DialogUtil.openCustomDialog(this@MainActivity) { accountString, passwordString ->
+                Toast.makeText(this@MainActivity, accountString + passwordString, Toast.LENGTH_SHORT).show()
+            }
         }
 
     }

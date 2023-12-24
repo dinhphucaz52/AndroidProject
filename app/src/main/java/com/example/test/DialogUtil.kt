@@ -10,7 +10,7 @@ import java.util.Objects
 
 class DialogUtil {
     companion object {
-        fun openCustomDialog(context: Context, onlistenLogin: interfaceOnlistenLogin) {
+        fun openCustomDialog(context: Context, onListenLoginSucces: ((String, String) -> Unit) ?= null) {
             Dialog(context).apply {
                 setContentView(R.layout.custom_dialog)
                 setCancelable(false)
@@ -30,7 +30,8 @@ class DialogUtil {
                     val passwordString: String = edt_password.text.toString()
 
                     if (accountString == "phuc" && passwordString == "1234") {
-                        onlistenLogin.onListenLogin(accountString, passwordString)
+                        onListenLoginSucces?.invoke(accountString, passwordString)
+                        dismiss()
                     }
 
                 }
@@ -38,8 +39,4 @@ class DialogUtil {
             }.show()
         }
     }
-}
-
-interface interfaceOnlistenLogin {
-    fun onListenLogin(accountString: String, passwordString: String)
 }
