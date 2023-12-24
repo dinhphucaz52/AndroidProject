@@ -3,15 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D0DEDC"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="#D0DEDC"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btn_open_custom_dialog"
-        android:text="@string/ACTIVITY1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="@string/ACTIVITY1" />
 
 </LinearLayout>

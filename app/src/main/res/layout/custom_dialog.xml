@@ -1,34 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical">
 
     <EditText
         android:id="@+id/edt_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="14"
         android:gravity="center"
-        android:textStyle="bold"
         android:hint="ACCOUNT"
+        android:inputType="text"
         android:textSize="14sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/edt_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="14"
         android:gravity="center"
-        android:textStyle="bold"
         android:hint="PASSWORD"
+        android:inputType="text"
         android:textSize="14sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btn_login"
-        android:textSize="16sp"
-        android:text="LOGIN"
-        android:layout_gravity="center"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:textSize="20sp" />
 </LinearLayout>
